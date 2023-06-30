@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> Movie Post Slider</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1 class="title">Movie Post Slider</h1>
+<div class="slider" x-data="{start: true, end: false}">
+  <div class="slider__content" x-ref="slider" x-on:scroll.debounce="$refs.slider.scrollLeft == 0 ? start = true : start = false; Math.abs(($refs.slider.scrollWidth - $refs.slider.offsetWidth) - $refs.slider.scrollLeft) < 5 ? end = true : end = false;">
+    <div class="slider__item">
+      <img class="slider__image" src="./vector images/gun jagame thandiram.jpeg" alt="Image">
+      <div class="slider__info">
+        <h2>Jagame Thandhiram</h2>
+      </div>
+    </div> 
+    <div class="slider__item">
+      <img class="slider__image" src="./vector images/soorarai pottru.jpeg" alt="Image">
+      <div class="slider__info">
+        <h2>Soorarai Pottru</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="./vector images/anbe sivam.jpeg" alt="Image">
+      <div class="slider__info">
+        <h2>Anbe Sivam</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="./vector images/ajith.jpeg" alt="Image">
+      <div class="slider__info">
+        <h2>Nerkonda Paarvai</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="./vector images/goku.jpeg" alt="Image">
+      <div class="slider__info">
+        <h2>Dragon Ball Z</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="./vector images/jd d gunfire.jpeg" alt="Image">
+      <div class="slider__info">
+        <h2>Jagame Thandhiram</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="./vector images/master punch.jpeg" alt="Image">
+      <div class="slider__info">
+        <h2>Master</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="./vector images/jd suruli d.jpeg" alt="Image">
+      <div class="slider__info">
+        <h2>Suruli in JT</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="./vector images/Vaathi raid-u.jpeg" alt="Image">
+      <div class="slider__info">
+        <h2>Vaathi Raid-u</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="./vector images/Vikram.jpeg" alt="Image">
+      <div class="slider__info">
+        <h2>Vikram</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="./vector images/yuvan.jpeg" alt="Image">
+      <div class="slider__info">
+        <h2>Yuvan</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="./vector images/Alan.png" alt="Image">
+      <div class="slider__info">
+        <h2>Alan</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="./vector images/Asuran.png" alt="Image">
+      <div class="slider__info">
+        <h2>Asuran</h2>
+      </div>
+    </div>
+    <div class="slider__item">
+      <img class="slider__image" src="./vector images/yuvan with mic.png" alt="Image">
+      <div class="slider__info">
+        <h2>U1</h2>
+      </div>
+    </div>
+  </div>
+  <div class="slider__nav">
+    <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth * -1, behavior: 'smooth'});" x-bind:class="start ? '' : 'slider__nav__button--active'">Previous</button>
+    <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth, behavior: 'smooth'});" x-bind:class="end ? '' : 'slider__nav__button--active'">Next</button>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.2/cdn.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
